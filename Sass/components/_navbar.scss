@@ -1,0 +1,210 @@
+.navbar {
+
+        width: 100%;
+        position: relative;
+
+    &__hamburger-container {
+        position: relative;
+        background: white;
+        z-index:10;
+        
+        }
+        
+        &__hamburger {
+
+             position: absolute;
+             cursor: pointer;
+             top: 5%;
+             right: 2.5%;
+             z-index: 2;
+             position: fixed;
+             height: 6.1rem;
+             width: 6.1rem;
+             border-radius: 50%;
+             background-color: #fff;
+             cursor: pointer;  
+             justify-items: center;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             box-shadow: 0 1.5rem 4rem rgba(32, 31, 31, 0.15); 
+             
+             @include respond(tab-port) {
+                top: 2.5%;
+
+                @include respond (phone) {
+                
+                    top: 2.5%;
+                    right: 2.7%;
+                    padding: 0.75rem 0.3rem;
+    
+                }
+             }
+             
+            
+            }
+
+            
+
+            &__line-container {
+                @include respond(phone) {
+                    margin-top: 0.2em;
+                    margin-left: 1em;
+                }
+            }
+                    
+            &__line {
+
+                margin: 3rem;
+                width: 36px;
+                height: 3px;
+                margin: -3px;
+                align-self: center;
+                background: $color-black; 
+
+                @include respond (phone) {
+                    width: 30px;
+                  
+
+                }  
+ 
+            }
+
+            #upper-line {
+                width: 30px;
+                height: 3px;
+                margin-top: -10px;
+                background: $color-black; 
+
+                @include respond(phone) {
+                    width: 25px;
+               
+                }
+
+            }
+
+            #lower-line {
+                width: 30px;
+                height: 3px;
+                padding-right: 2px;
+                background: $color-black; 
+
+                @include respond(phone) {
+                    width: 25px;
+                    top: 1%;
+                    right: 1%;
+                }
+
+            }
+
+            .rotate-1 {
+                transform: rotate(135deg);
+                transition: all .5s ease-out;
+                margin-top: 1rem;
+
+                @include respond(phone) {
+                    margin-top: 0;
+                }
+        
+            }
+        
+            .rotate-3 {
+                transform: rotate(-135deg);
+                transition: all .5s ease-out;
+        
+            }
+
+            .add-margin {
+                padding: 0.86em 1.55em;
+
+                @include respond(tab-port) {
+                    padding: 0.70em 1.2em;
+
+                }
+
+                @include respond(phone) {
+                    padding: 0.70em 1.2em;
+
+
+                }
+            }
+
+               
+            }
+
+            .make-transparent {
+                display: none;
+            }
+     
+
+                &__nav-links {
+
+                    height: 100vh;
+                    width: 100%; 
+                    -webkit-clip-path: circle(1.0% at 50% 50%);
+                    clip-path: circle(1.0% at 50% 50%);
+                    transition: all 0.3s ease-out;
+                    opacity: .93;
+                    line-height: 4.08rem;
+                    padding-top: 13%;
+                    @include center-horizontal-vertical;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+     
+                    &__nav-link {
+                        border-top: 1px solid $color-white;
+                        text-align: center;
+                        z-index: 2000;
+                        padding: 1.2rem;
+                    }
+
+                    &__nav-link:last-child {
+                        border-bottom: 1px solid $color-white;
+                    }
+                        &__link {
+                            font-size: 31.9px;
+                            color: $color-white;
+                            text-decoration: none;
+                            z-index: 1000;
+                            margin: 1rem;
+
+
+                            &:hover {
+                                text-transform: uppercase;
+                                font-weight: 700;
+                                
+                            }
+                        }
+                }
+                    
+
+                   
+                        &__nav-links.open {
+                            clip-path: circle(152.5% at 48% 1%);
+                            background: $color-red-dark;
+                            height: 100vh;
+                            z-index: 2;
+                            align-content: center;
+
+                            @include respond(phone) {
+                                padding-top: 33%;
+        
+                            }
+                        
+                        
+                        }
+         
+            
+        
+        
+    
+        
+        
+           
+                    
+                
+            
+            
+            
+            
